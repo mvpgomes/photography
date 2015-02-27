@@ -71,7 +71,7 @@
         }
     },
     "conditions": {
-        "cancellation_policy": "strict",
+        "cancellation_policy": "flexible/moderate/strict/super-strict",
         "minimum_nights": 90
     },
     "rent": {
