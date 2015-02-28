@@ -1,0 +1,44 @@
+/* Empty. Add your own CSS if you like */
+
+.authentication_view {
+  background-image: url('../img/bg.jpg');
+  background-size: auto 100%;
+}
+
+h4 {
+  margin-left: 15px;
+}
+
+.button-section {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.button-container {
+  margin: 5px;
+  text-align: center;
+  padding: 0 10px 0 10px;
+}
+
+.button-login {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  top: 180px;
+  text-align: center;
+}
+
+.logo {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 1em;
+}
+
+img.logo-image {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}

@@ -1,0 +1,32 @@
+<ion-view view-title="Kitchen">
+  <!-- Kitchen -->
+  <ion-content>
+    <div class="card">
+      <ion-list>
+        <ion-item ng-repeat="item in kitchen_features">
+          <label class="item item-input item-select">
+            <div class="input-label">{{item.name}}</div>
+            <select ng-model="item.value">
+              <option selected>yes</option>
+              <option>no</option>
+            </select>
+          </label>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div class="card">
+      <div class="container">
+        <h4>Area</h4>
+        <label class="item item-input">
+          <input ng-model="area.value" type="text" placeholder="m2">
+        </label>
+      </div>
+    </div>
+    <!-- Go to Living Room Tab -->
+    <div class="container button-container">
+      <button class="button button-positive button-section" ng-click="update_data()">
+        Living Room
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

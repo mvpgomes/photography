@@ -1,0 +1,25 @@
+<ion-view view-title="Features">
+  <ion-content>
+    <!-- Property Features -->
+    <div class="card">
+      <ion-list>
+        <ion-item ng-repeat="item in property_features">
+          <label class="item item-input item-select">
+            <div class="input-label">{{item.name}}</div>
+            <select ng-model="item.value" >
+              <option selected>yes</option>
+              <option>unknown</option>
+              <option>no</option>
+            </select>
+          </label>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!-- Go to Rules Tab -->
+    <div class="container button-container">
+      <button class="button button-positive button-section" ng-click="update_data()">
+        Rules
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

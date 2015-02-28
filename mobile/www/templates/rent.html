@@ -1,0 +1,40 @@
+<ion-view view-title="Rent">
+  <ion-content>
+    <!-- Rental Option -->
+    <div class="card">
+      <div class="list">
+        <!-- Accomodation Type -->
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Rental Option
+          </div>
+          <select data-ng-options="option as option.label for option in options" ng-model="option" ng-change="update(option)"></select>
+        </label>
+      </div>
+    </div>
+    <!-- Rent -->
+    <div class="card" ng-show="rent_as_whole()">
+      <div class="container">
+        <h4>Rent Details</h4>
+        <ion-list>
+          <ion-item ng-repeat="item in rent_details">
+            <label class="item item-input">
+              <input ng-model="item.value" type="number" placeholder={{item.name}}>
+            </label>
+          </ion-item>
+          <ion-item>
+            <label class="item item-input">
+              <textarea ng-model="comments" placeholder="Comments"></textarea>
+            </label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+    <div class="container button-container">
+      <!-- Go to Cleaning & Bills Tab -->
+      <button class="button button-positive button-section" ng-click="update_data()">
+        Cleaning & Bills
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,69 @@
+<ion-view view-title="Bedroom">
+  <!-- Bedroom -->
+  <ion-content>
+    <div class="card">
+      <!-- Bedroom Description -->
+      <div class="container bedroom">
+        <div class="list">
+          <label class="item item-input">
+            <input ng-model="name.name" type="text" placeholder="Name">
+          </label>
+          <label class="item item-input">
+            <input ng-model="area.value" type="text" placeholder="Area">
+          </label>
+          <label class="item item-input">
+            <input ng-model="available_date.value" type="date" placeholder="Available Date">
+          </label>
+          <label class="item item-input">
+            <input ng-model="maximum_people.value" type="number" placeholder="Maximum People">
+          </label>
+          <label class="item item-input">
+            <input ng-model="price_per_month.value" type="number" placeholder="Price/Month (1 Person)">
+          </label>
+          <label class="item item-input">
+            <input ng-model="extra_cost_per_person.value" type="number" placeholder="Extra Cost per Person">
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- Bedroom Type -->
+    <div class="card">
+      <div class="list">
+        <!-- Accomodation Type -->
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Bedroom Type
+          </div>
+          <select data-ng-options="option as option.label for option in options" ng-model="option" ng-change="update(option)"></select>
+        </label>
+      </div>
+    </div>
+    <!-- Beedroom Features-->
+    <div class="card">
+      <h4>Features</h4>
+      <ion-list>
+        <ion-item ng-repeat="item in bedroom_features">
+          <label class="item item-input item-select">
+            <div class="input-label">{{item.name}}</div>
+            <select ng-model="item.value">
+              <option selected>yes</option>
+              <option>no</option>
+            </select>
+          </label>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!-- Add a new Bedroom -->
+    <div class="container button-container">
+      <button class="button button-positive button-section" ng-click="add_bedroom()">
+        Add Bedroom
+      </button>
+    </div>
+    <!-- Submit -->
+    <div class="container button-container">
+      <button class="button button-positive button-section" ng-click="submit_report()">
+        Submit Report
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

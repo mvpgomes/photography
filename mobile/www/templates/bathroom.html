@@ -1,0 +1,21 @@
+<ion-view view-title="Bathroom / WCs">
+  <!-- Bathroom -->
+  <ion-content>
+    <div class="card">
+      <div class="list">
+        <label class="item item-input">
+          <input ng-model="number_of_bathrooms.value" type="text" placeholder="Number of Shared Bathrooms (toilet & shower or bathtub)">
+        </label>
+        <label class="item item-input">
+          <input ng-model="number_of_wcs.value" type="text" placeholder="Number of Shared WCs (toilet & sink)">
+        </label>
+      </div>
+    </div>
+    <!-- Go to Rules Tab -->
+    <div class="container button-container">
+      <button class="button button-positive button-section" ng-click="update_data()">
+        Bedroom
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

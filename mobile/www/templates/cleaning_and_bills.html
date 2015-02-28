@@ -1,0 +1,92 @@
+<ion-view view-title="Cleaning & Bills">
+  <ion-content>
+    <div class="card">
+      <!-- Cleaning -->
+      <div class="cleaning-section container">
+        <h4>Cleaning</h4>
+        <div class="list">
+          <label class="item item-input item-select">
+            <div class="input-label">Select Areas</div>
+            <select data-ng-options="option as option.label for option in options" ng-model="option" ng-change="update(option)"></select>
+          </label>
+          <label class="item item-input">
+            <input ng-model="cleaning.periodicity" type="text" placeholder="Frequency (be specific)">
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- Bills -->
+    <div class="card">
+      <div class="bills-section container">
+        <h4>Bills Included in Rent Price</h4>
+        <div class="list">
+          <!-- Water Included -->
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Water Included?
+            </div>
+            <select ng-model="water.included">
+              <option selected>yes</option>
+              <option>unknown</option>
+              <option>no</option>
+            </select>
+          </label>
+          <!-- Electricity Included -->
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Electricity Included?
+            </div>
+            <select ng-model="electricity.included">
+              <option selected>yes</option>
+              <option>unknown</option>
+              <option>no</option>
+            </select>
+          </label>
+          <!-- Type of Gas -->
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Type of Gas
+            </div>
+            <select ng-model="gas.present">
+              <option selected>bottle</option>
+              <option>pipe</option>
+              <option>none</option>
+            </select>
+          </label>
+          <!-- Gas Included -->
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Gas Included?
+            </div>
+            <select ng-model="gas.included">
+              <option selected>yes</option>
+              <option>unknown</option>
+              <option>no</option>
+            </select>
+          </label>
+          <!-- Electric Included -->
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Internet Included?
+            </div>
+            <select ng-model="internet.included">
+              <option selected>yes</option>
+              <option>unknown</option>
+              <option>no</option>
+            </select>
+          </label>
+          <!-- Maximum Value for Included Bills -->
+          <label class="item item-input">
+            <input ng-model="maximum.max.amount" type="number" placeholder="Maximum Value for Included Bills">
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- Go to Kitchen tab -->
+    <div class="container button-container">
+      <button class="button button-positive button-section" ng-click="update_data()">
+        Kitchen
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

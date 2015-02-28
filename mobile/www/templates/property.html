@@ -1,0 +1,79 @@
+<ion-view view-title="Property">
+  <ion-content>
+    <div class="card">
+      <div class="list">
+        <!-- Accomodation Type -->
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Accomodation Type
+          </div>
+          <select ng-model="typology.type_code">
+            <option ng-selected>hotel</option>
+            <option>residence</option>
+            <option>hostel</option>
+            <option>private</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <!-- Property Type -->
+    <div class="card">
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Property Type
+        </div>
+        <select ng-model="typology.accomodation_type_code">
+          <option selected>house</option>
+          <option>apartment</option>
+          <option>studio</option>
+        </select>
+      </label>
+    </div>
+    <!-- Property Details -->
+    <div class="card">
+      <div class="container">
+        <h4>Property Details</h4>
+        <div class="list">
+          <label class="item item-input">
+            <input ng.model="address.city_code" type="text" placeholder="City">
+          </label>
+          <label class="item item-input">
+            <input ng.model="address.city_code" type="Text" placeholder="City Area">
+          </label>
+          <label class="item item-input">
+            <input ng-model="address.extra" type="text" placeholder="Full Adress">
+          </label>
+          <label class="item item-input">
+            <input ng-model="address.postal_code" type="number" placeholder="Postal Code">
+          </label>
+          <label class="item item-input">
+            <input ng-model="landlord.accomodation_provider" type="text" placeholder="Landlord Name">
+          </label>
+          <label class="item item-input">
+            <input type="number" placeholder="Phone Number">
+          </label>
+        </div>
+      </div>
+    </div>
+    <!--Property Structure -->
+    <div class="card">
+      <div class="container">
+        <h4>Property Structure</h4>
+        <div class="list">
+          <label class="item item-input">
+            <input ng-model="typology.number_of_bedrooms" type="number" placeholder="Total Number of Beedrooms">
+          </label>
+          <label class="item item-input">
+            <input ng-mdoel="typology.area" type="number" placeholder="Property Area m2 (Optional)">
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- Go to Features Tab -->
+    <div class="container button-container">
+      <button class="button button-positive button-section" ng-click="update_data()">
+        Property Features
+      </button>
+    </div>
+  </ion-content>
+</ion-view>
