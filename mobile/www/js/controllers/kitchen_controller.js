@@ -15,7 +15,7 @@ angular.module('uniplaces.controllers')
       { name: 'Dryer', field: 'dryer',  value: '' },
       { name: 'Dishwasher', field: 'dishwasher', value: '' },
       { name: 'Dishes-Cultery', field: 'dishes_cultery', value: '' },
-      { name: 'pots-pan', field: 'pots-pan', value: ''},
+      { name: 'Pots-Pan', field: 'pots-pan', value: ''},
     ];
     // Kitchen Object
     $scope.kitchen = {
@@ -28,7 +28,7 @@ angular.module('uniplaces.controllers')
       object = $scope.kitchen_features;
       var features = $scope.kitchen_features;
       var data = applicationService.deserialize_data(window.localStorage['property_verification'] || '{}');
-      $scope.kitchen['features'] = applicationService.format_checkbox(features);
+      $scope.kitchen['features'] = applicationService.format_object(features);
       $scope.kitchen['area'] =  $scope.area.value;
       data['units']['kitchen'] = $scope.kitchen;
       window.localStorage['property_verification'] = applicationService.serialize_data(data);
